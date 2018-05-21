@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite allow-return-values="true" name="Suite">
+  <test allow-return-values="true" name="Testexcel">
+  <classes>
+  <class name="CQPlus.ExcelReader"/>
+     </classes>
+  </test>
+  
+       <test allow-return-values="true" name="Testhome">
+       <classes>
+         
+      <class name="CQPlus.HomePage"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
