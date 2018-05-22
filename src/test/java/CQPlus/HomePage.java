@@ -2,14 +2,18 @@ package CQPlus;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+//import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+
 
 
 import pageObject.LoginPage;
@@ -26,26 +30,37 @@ public class HomePage extends BaseUd {
 		  log.info("Driver is intialized");
 		
 	}
-@Test(dataProvider="getData")
-//	@Test
-	public void LogIn(String username,String Password) throws IOException, InterruptedException
-	{
-
-	url= geturl("url");
-	 driver.get(url);
-//	LandingPage lp=new LandingPage(driver);
-//	lp.getLogin().click();
+//@Test(dataProvider="getData")
+////	@Test
+//	public void LogIn(String username,String Password) throws IOException, InterruptedException
+//	{
+//
+//	url= geturl("url");
+//	 driver.get(url);
+//
+//	LoginPage login=new LoginPage(driver);
+//	login.getemail().sendKeys(username);
+//	login.getpassword().sendKeys(Password);
+//	login.loginbutton().click();
+////	log.info(text);
+//	
 //	Thread.sleep(300);
-	LoginPage login=new LoginPage(driver);
-	login.getemail().sendKeys(username);
-	login.getpassword().sendKeys(Password);
-	login.loginbutton().click();
-//	log.info(text);
+//	
+//	
+//	}
 	
-	Thread.sleep(300);
-	
-	
-	}
+	public	static void main (String [] args) throws IOException{
+
+
+ExcelReader ex=new ExcelReader();
+		int colnum = 0;
+//String respone =ex.getfile();
+colnum=ex.getcolnum(colnum);
+System.out.println(colnum);
+int rownum = 0;
+rownum=ex.getrownum(rownum);
+System.out.println(rownum);
+		}
 	
 @AfterTest
 public void aftertest()
